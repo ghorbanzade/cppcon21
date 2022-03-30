@@ -1014,7 +1014,7 @@ void to_json_impl(const T& object) {
   constexpr auto members = meta.get_accessible_data_members();
   std::size_t count = 0;
   constexpr for(const RecordMember member : members) {
-    std::cout << '"' << member.get_name() << "'" << ":";
+    std::cout << '"' << member.get_name() << '"' << ':';
     constexpr reflect::Constant member_ptr = member.get_pointer();
     to_json(object.*unreflexpr(member_ptr));
     if (++count != members.size()) {
