@@ -62,8 +62,8 @@ int main() {
   check2("some-array", std::vector<int>{42, 24, 54});
   check2("some-date", date);
 
-  check("some-date", MyDate(2021, 10, 29));
+  check("some-date", MyDate{2021, 10, 29});
   check("some-map",
-        std::map<std::string, MyDate>{{"today", MyDate(2021, 10, 29)},
-                                      {"yesterday", MyDate(2020, 10, 28)}});
+        std::map<std::string, MyDate>{{"today", MyDate{2021, 10, 29}},
+                                      {"yesterday", MyDate{2020, 10, 28}}});
 }
